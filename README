@@ -1,0 +1,4 @@
+Project uses OMDb api
+http://www.omdbapi.com/ 
+to create simple website to search movies.
+dependencies: axios, bootstrap, OMDb.
