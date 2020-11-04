@@ -4,7 +4,7 @@ searchForm = document.querySelector("#searchForm")
 
 function createCard(data)
 {
-	console.log(data)
+	// console.log(data)
 	card = document.createElement("div");
 	card.setAttribute("class","card mx-auto movie_cards")
 	card.setAttribute("style","width: 25rem;")
@@ -43,12 +43,16 @@ function createMovieCards(data){
 		console.log("do error handling here")
 		return
 	}
+		search_result = document.querySelector(".search_result");  
+		while (search_result.hasChildNodes()) {  
+  		search_result.removeChild(search_result.firstChild);
+	}
 	// cards=[]
 	for (i = 0; i < data.length; i++) {
 		card = createCard(data[i])  
-		document.body.appendChild(card)
+		search_result.appendChild(card)
 	}
-	console.log(data)
+	// console.log(data)
 }
 
 function onSearchSubmit(event){
